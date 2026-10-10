@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dy7spofkhqrhl"]
+
+[ext_resource type="Texture2D" uid="uid://by7j2eg37bqls" path="res://icon.svg" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dq3hsjx4ys2dc" path="res://scenes/level_1.tscn" id="3_sugp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wipp0"]
+size = Vector2(124, 127.10001)
+
+[node name="Main" type="Node2D" unique_id=145052752]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=975341791]
+position = Vector2(622, 1289.0001)
+scale = Vector2(10, 10)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1659682853]
+texture = ExtResource("2_sugp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=343698742]
+position = Vector2(0, -0.5500183)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_wipp0")
+
+[node name="Level1" parent="." unique_id=757817605 instance=ExtResource("3_sugp2")]

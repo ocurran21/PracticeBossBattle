@@ -1,0 +1,169 @@
+[gd_scene format=4 uid="uid://dq3hsjx4ys2dc"]
+
+[ext_resource type="Texture2D" uid="uid://bwctl20c0cefm" path="res://assets/images/background/forest_sky.png" id="1_5xbjy"]
+[ext_resource type="Texture2D" uid="uid://cxo7jus72cle1" path="res://assets/images/tilemap/japan_tileset.png" id="1_014kd"]
+[ext_resource type="Texture2D" uid="uid://bn0fxdiwbcvwi" path="res://assets/images/background/forest_mountain.png" id="2_pa8r4"]
+[ext_resource type="Texture2D" uid="uid://bxq0ouklmr6d5" path="res://assets/images/background/forest_back.png" id="3_15mv3"]
+[ext_resource type="PackedScene" uid="uid://cefibquvgwwov" path="res://scenes/player.tscn" id="4_fcfvj"]
+[ext_resource type="Texture2D" uid="uid://dlmlcn8tul6oe" path="res://assets/images/background/forest_short.png" id="5_e3sih"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fcfvj"]
+load_path = "res://.godot/imported/forest_long.png-390d1d926a91eee9f0b98946cffdd3c6.ctex"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bswci"]
+texture = ExtResource("1_014kd")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+0:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wipp0"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_bswci")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glulg"]
+size = Vector2(20, 30.399996)
+
+[node name="Level1" type="Node2D" unique_id=757817605]
+
+[node name="SkyParallax" type="Parallax2D" parent="." unique_id=598782587]
+scale = Vector2(1.2, 1.2)
+scroll_scale = Vector2(0.4, 0.4)
+scroll_offset = Vector2(0, 500)
+repeat_size = Vector2(1900, 0)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="SkyParallax" unique_id=1906572355]
+texture_filter = 1
+texture = ExtResource("1_5xbjy")
+
+[node name="Mountains" type="Parallax2D" parent="." unique_id=361566736]
+scale = Vector2(1.2, 1.2)
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(746, 341)
+repeat_size = Vector2(1520, 0)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Mountains" unique_id=483684019]
+texture_filter = 1
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_pa8r4")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1421176820]
+scale = Vector2(1.2, 1.2)
+scroll_scale = Vector2(0.6, 0.6)
+scroll_offset = Vector2(896, 330.00003)
+repeat_size = Vector2(1900, 0)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=462128201]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_15mv3")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1194217081]
+scale = Vector2(1.2, 1.2)
+scroll_scale = Vector2(1.2, 1.2)
+scroll_offset = Vector2(879, 333.00003)
+repeat_size = Vector2(1900, 0)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=1386309778]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_fcfvj")
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=491916321]
+scale = Vector2(0.8, 0.8)
+scroll_scale = Vector2(1.5, 1.5)
+scroll_offset = Vector2(688, 188)
+repeat_size = Vector2(1900, 0)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D4" unique_id=1292855811]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_e3sih")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=427703818]
+texture_filter = 1
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAAAA4AAAAFAAAAAAAaAA4AAAAFAAAAAAABAA4AAAAFAAAAAAACAA4AAAAFAAAAAAADAA4AAAAFAAAAAAAEAA4AAAAFAAAAAAAFAA4AAAAFAAAAAAAGAA4AAAAFAAAAAAAHAA4AAAAFAAAAAAAIAA4AAAAFAAAAAAAJAA4AAAAFAAAAAAAKAA4AAAAFAAAAAAALAA4AAAAFAAAAAAAMAA4AAAAFAAAAAAANAA4AAAAFAAAAAAAOAA4AAAAFAAAAAAAPAA4AAAAFAAAAAAAQAA4AAAAFAAAAAAARAA4AAAAFAAAAAAASAA4AAAAFAAAAAAATAA4AAAAFAAAAAAAUAA4AAAAFAAAAAAAVAA4AAAAFAAAAAAAWAA4AAAAFAAAAAAAXAA4AAAAFAAAAAAAYAA4AAAAFAAAAAAAZAA4AAAAFAAAAAAACAA0AAAAFAAAAAAADAA0AAAAFAAAAAAAEAA0AAAAFAAAAAAAHAAwAAAAIAAIAAAAHAA0AAAAIAAMAAAAFAA0AAAAFAAAAAAAFAAwAAAAFAAAAAAAJAA0AAAAFAAAAAAALAAwAAAAFAAAAAAALAA0AAAAFAAAAAAANAA0AAAAFAAAAAAAOAA0AAAAFAAAAAAAMAA0AAAAFAAAAAAAQAA0AAAAFAAAAAAARAA0AAAAFAAAAAAASAA0AAAAIAAQAAAAUAAwAAAAIAAIAAAAUAA0AAAAIAAMAAAAWAAwAAAAIAAIAAAAWAA0AAAAIAAMAAAD//w4AAAAAAAAAAAD//w0AAAAAAAAAAAD//wwAAAAAAAAAAAD//wsAAAAAAAAAAAD//woAAAAAAAAAAAD//wkAAAAAAAAAAAD//wgAAAAAAAAAAAD//wcAAAAAAAAAAAD//wYAAAAAAAAAAAD//wUAAAAAAAAAAAD//wQAAAAAAAAAAAD//wMAAAAAAAAAAAD//wIAAAAAAAAAAAAbAA4AAAAAAAAAAAAbAA0AAAAAAAAAAAAbAAwAAAAAAAAAAAAbAAsAAAAAAAAAAAAbAAoAAAAAAAAAAAAbAAkAAAAAAAAAAAAbAAgAAAAAAAAAAAAbAAcAAAAAAAAAAAAbAAYAAAAAAAAAAAAbAAUAAAAAAAAAAAAbAAQAAAAAAAAAAAAbAAMAAAAAAAAAAAAbAAIAAAAAAAAAAAD//wEAAAAAAAAAAAD//wAAAAAAAAAAAAAbAAEAAAAAAAAAAAAbAAAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_wipp0")
+
+[node name="Player" parent="." unique_id=1505324211 instance=ExtResource("4_fcfvj")]
+position = Vector2(124.99999, 457.99997)
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1332304209]
+scale = Vector2(0.19999999, 0.19999999)
+limit_left = 0
+limit_top = 0
+limit_right = 1300
+limit_bottom = 720
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=387939194]
+position = Vector2(5, 19.8)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_glulg")
